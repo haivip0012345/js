@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js cơ bản</title>
+</head>
+<body>
+	  <script language="javascript">
+	  	 function login(){
+	  	 	var a='haivip001234';
+	  	 	var b='anhhai002';
+	  		var username=document.getElementById('username').value;
+	  		var password= document.getElementById('password').value;
+	  		if (username != a) {
+	  			alert('tên đăng nhập hoặc mật khẩu không đúng');
+	  			return false;
+	  		}
+	  		if(password != b){
+	  			alert('tên đăng nhập hoặc mật khẩu không đúng');
+	  			return false;
+	  		}
+	  		alert("đăng nhập thành công");
+	  	}
+      </script>
+      <form>
+      	username : <input type="text" name="" id="username" onkeyup=""> <br>
+      	password: <input type="password" name="" id="password"> <br>
+      	<button onclick="return login()">
+      		<a href="changefruit.html">đăng nhập</a>
+      	</button>
+      </form>
+
+
+     </script>
+</body>
+</html>

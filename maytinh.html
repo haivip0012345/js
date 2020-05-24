@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>máy tính</title>
+</head>
+<body>
+Nhập a: <input type="" name="" id="a">
+<br>
+Nhập b: <input type="" name=""id="b">
+<button onclick="cong()">
+	+
+</button>
+<button onclick="tru()">
+	-
+</button>
+<button onclick="nhan()">
+	x
+</button>
+<button onclick="chia()">
+	/
+</button>
+<script type="text/javascript">
+	var a= document.getElementById('a');
+	var b=document.getElementById('b');
+	function cong(){
+		alert(parseInt(a.value)+ parseInt(b.value));
+	}
+	function tru(){
+		alert(parseInt(a.value)- parseInt(b.value));
+	}
+	function nhan(){
+		alert(parseInt(a.value)* parseInt(b.value));
+	}
+	function chia(){
+		alert(parseInt(a.value)/ parseInt(b.value));
+	}
+</script>
+</body>
+</html>

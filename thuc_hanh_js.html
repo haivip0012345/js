@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body>
+<div id="div">
+	<h2>
+		Skysssss ơi say oh zeeeeeeee!
+	</h2>
+</div>
+<button id="say">
+	say
+</button>
+<script type="text/javascript">
+	var a= document.getElementById('say');
+	a.addEventListener("click",function(){
+		var p=document.createElement("p");
+		p.innerHTML="<h1>oh zeeeeeeee!</h1>";
+		p.style.color='blue';
+		document.getElementById('div').appendChild(p);
+	});
+</script>
+
+</body>
+</html>

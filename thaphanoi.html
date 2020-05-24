@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+</head>
+<body style="background-color: pink">
+	<span>Tìm kiếm</span><br>
+	<br>
+	<input type="" name="" id="search"><br>
+	<input type="button" name="" value="tìm kiếm" id="button">
+	<div id="nangcao" style="">
+		<a href="#">tìm kiếm nâng cao</a>
+	</div>
+	<div id="huy" style="display: none">
+		<a href="#">hủy tìm kiếm nâng cao</a>
+	</div>
+	<div id="show">
+	</div>
+	<script type="text/javascript">
+		var a=document.getElementById('nangcao');
+		var b=document.getElementById('huy');
+		var show=document.getElementById('show');
+		var button=document.getElementById('button');
+		var search=document.getElementById('search');
+		a.onclick=function(){
+			a.style.display='none';
+			b.style.display='block';
+			show.innerHTML="<select><option>PHP</option><option>HTML</option></select>"
+		}
+		b.onclick=function(){
+			a.style.display='block';
+			b.style.display='none';
+			show.innerHTML="";
+		}
+		button.onclick=function(){
+			var arr=['nguyễn ngọc hải','nguyễn ngọc hà'];
+			for(var i=0;i<arr.length;i++){
+				if(search.value==arr[i]){
+					console.log('tìm thấy');
+				}
+			}
+		}
+	</script>
+</body>
+</html>

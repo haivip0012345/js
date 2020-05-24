@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>index</title>
+</head>
+<body style="background-color: pink">
+	<div style="margin: auto;font-size: 40px">
+		QUẢN LÍ NHÂN VIÊN
+	</div>
+	<div id="right" style="float: right;background-color: red;height: 300px;width: 400px;opacity: 60%;border:2px solid #000;color: white;font-size: 14px;font-family: tahoma">
+		
+	</div>
+	<div id="info" style="width: 500px;height: 500px;border:2px solid black;background-color: #0098db;opacity: 80%">
+	<span>Nhập họ tên</span><br>	<input type="" name="" id="ten" value=""><br>
+	<span>Nhập mã nhân viên</span><br>	<input type="" name="" id="code"><br>
+	<span>Nhập hệ số lương</span><br> <input type="" name="" id="boost"><br>
+	<span>Nhập lương cơ bản</span><br> <input type="" name="" id="bacsis"><br>
+	<input type="button" name="" value="tính" style="margin-top: 5px" id="button" onclick="solves()">
+	</div>
+	<script type="text/javascript">
+	var ten =document.getElementById('ten');
+	var code=document.getElementById('code');
+	var boost=document.getElementById('boost');
+	var bacsis=document.getElementById('bacsis');
+	var button=document.getElementById('button');
+	var show=document.getElementById('right');
+	function solves(){
+		show.innerHTML="Tên nhân viên là: "+ten.value+"<br>"+"Mã nhân viên là: "+code.value+"<br>"+"Hệ số lương: "+boost.value+"<br>"+"lương cơ bản là: "+bacsis.value+"<br>"+"Tiền phụ cấp thêm: "+parseInt(boost.value)*parseInt(bacsis.value)*0.25+"<br>"+"Tổng lương: "+(parseInt(boost.value)*parseInt(bacsis.value)*0.25+parseInt(boost.value)*parseInt(bacsis.value));
+}
+	</script>
+	
+</body>
+</html>

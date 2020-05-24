@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+</head>
+<body style="background: url(ba.jpg);background-repeat: no-repeat;background-size: cover;margin:auto;width: 100%,height:100%">
+	<div style="height: 40px;width: 300px;background-color:;color:white;line-height: 40px;margin: auto;text-align: center;font-size: 30px">
+		Tính phương trình bậc 2
+	</div>
+	<div style="margin: auto;background-color:;width: 300px">
+a:<input type="" name="" id="a"> <br>
+b:<input type="" name="" id="b"><br>
+c:<input type="" id="c" name=""><br>
+<button  onclick="tinh()">tính</button><br>
+</div>
+<div id="tinh" style="height: 280px;background-color: black;display:block;width: 300px;margin: auto;text-align: center;padding: 20px">
+	
+</div>
+<script type="text/javascript">
+	var a=document.getElementById('a');
+	var b=document.getElementById('b');
+	var c=document.getElementById('c');
+	var solves=document.getElementById('tinh');
+	function tinh(){
+		var delta= parseInt(b.value*b.value)-4*parseInt(a.value)*parseInt(c.value);
+		var x1= -(parseInt(b.value)+Math.sqrt(delta))/(2*parseInt(a.value));
+		var x2= -(parseInt(b.value)-Math.sqrt(delta))/(2*parseInt(a.value));
+		var x3= -(parseInt(b.value))/(2*parseInt(a.value));
+		if (delta>0) {
+			solves.innerHTML="phương trình có hai nghiệm phân biệt: "+"<br>"+"x1= "+x1+"<br>"+"x2= "+x2;
+			solves.style.color='white';
+
+
+		}
+		if (delta==0) {
+			solves.innerHTML="Phương trình có nghiệm kép: "+"<br>"+"x1 = x2 = "+x3;
+			solves.style.color='white';
+		}
+		if (delta<0) {
+			solves.innerHTML="Phương trình vô nghiệm";
+			solves.style.color='white';
+		}
+	}
+
+</script>
+</body>
+</html>

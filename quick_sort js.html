@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>alo</title>
+</head>
+<body>
+	<div>sap xep tang dan: </div>
+<script type="text/javascript">
+	function partition(a,l,h){
+		var pivot=a[h];
+		var i=l-1;
+		for(var j=l;j<=h;j++){
+			if(a[j]<pivot){
+				i++;
+				var tg;
+				tg=a[i];
+				a[i]=a[j];
+				a[j]=tg;
+			}
+		}
+		var tg=a[i+1];
+		a[i+1]=a[h];
+		a[h]=tg;
+		return i+1;
+	};
+	function quicksort(a,l,h){
+		if(l<h){
+		var pi=partition(a, l, h);
+		quicksort(a,l,pi-1);
+		quicksort(a,pi+1,h);
+	}
+	};
+	var a= new Array(66.6,23,234,99,2342,11,123);
+	
+	quicksort(a,0,a.length);
+	document.write(a.join(' -------'));
+</script>
+</body>
+</html>

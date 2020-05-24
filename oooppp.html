@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>logic game</title>
+</head>
+<body>
+<script type="text/javascript">
+	class hero{
+		constructor(name,hp,damage){
+			this.name=name;
+			this.hp=hp;
+			this.damage=damage;
+		}
+		applydamage(damage){
+			this.hp-=damage;
+		}
+		attack(enemy){
+			enemy.applydamage(this.damage);
+		}
+	}
+	class cungthu extends hero{
+		hutdame(damage){
+			this.damage-=damage;
+		}
+		attack(enemy){
+			super.attack(enemy);
+			this.damage+=enemy.damage*0.1;
+			this.hp+=this.damage*0.1;
+			enemy.hutdame(enemy.damage*0.1);
+			
+		}
+	}
+	const ashe=new cungthu('ashe',1350,950);
+	const yasuo= new cungthu('yasuo',2300,220);
+	var solandanh=0;
+	for(let i=1;yasuo.hp>0;i++){
+		ashe.attack(yasuo);
+		solandanh++;
+	}
+	if(yasuo.hp<=0){
+		console.log("đánh yasuo "+solandanh+' lần thì ');
+		console.log("yasuo die");
+
+	}
+	console.log({ashe,yasuo});
+</script>
+</body>
+</html>
